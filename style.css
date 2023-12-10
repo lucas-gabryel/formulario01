@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background: #E5E5E5;
+    font-family: Poppins, sans-serif;
+}
+
+/* Pseudoclasse: adiciona um elemento no html */
+body::before {
+    content: "";
+    width: 100%;
+    height: 368px;
+    background: #121214;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+header{
+    width: 736px;
+    margin: 80px auto 40px;
+}
+
+header h1 {
+    color: white;
+    font-family:'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    width: 319px;
+}
+
+header p {
+    color: #42D3FF;
+    font-weight: 400;
+    font-size: 16px;
+    width: 319px;
+
+    margin-top: 23px;
+}
+
+form {
+    width: 736px;
+
+    background: #FAFAFC;
+    border-radius: 8px 8px 0px 0px;
+    margin: auto;
+
+    min-height: 300px;
+
+    padding: 64px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+form fieldset {
+    border: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;  
+}
+
+form fieldset legend {
+    font-family: Archivo, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding-bottom: 14px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    color: #4E4958;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+    margin-left: 12px;
+
+    color: #C1BCCC;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.input-wrapper label span:hover {
+    color: #89878f;
+}
+
+.input-wrapper input, .input-wrapper textarea, .input-wrapper select {
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    background: #FAFAFC;
+    height: 56px;
+    padding: 0 24px;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    color: #C1BCCC;
+}
+
+.input-wrapper textarea {
+    padding: 0;
+    height: 200px;
+}
+
+.input-wrapper select {
+    appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 24px top 50%;
+}
+
+.input-tree {
+    display: flex;
+    gap: 20px;
+
+}
+
+.input-tree > div:nth-child(1) { 
+    /* Dentro do input-tree, está pegando a primeira div, por conta da função nth-child. Se estivesse sem o > ele pegaria todos as primeiras divs. */
+    width: 100%;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.checkbox-wrapper label {
+    color: #4E4958;
+    font-size: 14px;
+    line-height: 24px; 
+    display: flex;
+    gap: 16px;   
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+}
+
+.checkbox-wrapper label::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2804_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2804_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+
+}
+
+.checkbox-wrapper input:focus + label::before {
+    outline: 2px solid black;
+}
+
+footer {
+    background: #F0F0F4;
+    width: 736px;
+    height: 136px;
+    margin: auto;
+    display: flex;
+
+    padding: 40px 64px;
+    margin-bottom: 100px;
+
+    border-top: 1px solid #D6D6D6;
+    border-radius: 0 0 8px 8px;
+
+}
+
+footer input {
+    background: #04D361;
+    color: white;
+    width: 608px;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    border-radius: 8px;
+    border: none;
+
+    font-family: Archivo;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+footer input:hover{
+    background: #24bb68;
+}
+
